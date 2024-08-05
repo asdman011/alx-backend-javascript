@@ -1,9 +1,15 @@
-bob@dylan:~$ cat 0-main.js
-import { taskFirst, taskNext } from './0-constants.js';
+export function taskFirst() {
+  const task = 'I prefer const when I can.';
+  return task;
+}
 
-console.log(`${taskFirst()} ${taskNext()}`);
+export function getLast() {
+  return ' is okay';
+}
 
-bob@dylan:~$ npm run dev 0-main.js 
-I prefer const when I can. But sometimes let is okay
-bob@dylan:~$
+export function taskNext() {
+  let combination = 'But sometimes let';
+  combination += getLast();
 
+  return combination;
+}
